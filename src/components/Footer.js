@@ -6,7 +6,7 @@ const Footer = () => (
     Show:
      {" "}
     <FilterLink filter="SHOW_ALL">
-      All
+        All
     </FilterLink>
     {", "}
     <FilterLink filter="SHOW_FEUCHATTERTON">
@@ -14,7 +14,7 @@ const Footer = () => (
     </FilterLink>
     {", "}
     <FilterLink filter="SHOW_REST">
-      Ohter
+        Other
      </FilterLink>
   </p>
 )
