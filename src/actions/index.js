@@ -6,7 +6,7 @@ export const addTune = (artist, title) => ({
   title
 })
 
-export const setTextFilter = (filter) => ({
+export const setVisibilityFilter = (filter) => ({
   type: 'SET_VISIBILITY_FILTER',
   filter
 })
