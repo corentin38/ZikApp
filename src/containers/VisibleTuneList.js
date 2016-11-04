@@ -2,16 +2,10 @@ import { connect } from 'react-redux'
 import TuneList from '../components/TuneList'
 
 const getVisibleTunes = (tunes, filter) => {
-    switch (filter) {
-        case 'SHOW_ALL':
-            return tunes
-        case 'SHOW_FEUCHATTERTON':
-            return tunes.filter(t => t.artist === "Feu! Chatterton")
-        case 'SHOW_REST':
-            return tunes.filter(t => t.artist !== "Feu! Chatterton")
-        default:
-            throw new Error('Unknown filter: ' + filter)
+    if (filter === 'clear') {
+        return tunes
     }
+    return tunes.filter(t => t.artist.contains(filter))
 }
 
 const mapStateToProps = (state) => ({
